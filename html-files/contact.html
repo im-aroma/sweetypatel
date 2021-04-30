@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/location.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <!-- font awesome  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+
+    <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+          <a href="#"> <img src="https://la-boite.ca/themes/custom/laboite/images/laboite_logo.png" class="logo" alt="logo" /> </a>
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="call-girl.html">Call Girls</a>
+            </li>
+            <li>
+              <a href="location.html">Locations</a>
+            </li>
+            <li>
+              <a href="category.html" >Categories</a>
+            </li>
+            <li>
+              <a href="price.html">Price</a>
+            </li>
+            <li>
+              <a href="video.html">videos</a>
+            </li>
+            <li>
+              <a href="contact.html" class="active">Contact us</a>
+            </li>
+            <a href="tel:123-456-789" class="nav__mobile">   
+                <button type="button" class="btn btn-danger"> 
+                  <i class="fa fa-phone-square"></i>  123-456-7899 
+                  </button></a>
+
+                  <span class="mob-none" style="font-size:30px;cursor:pointer;color: #fff; padding-top: 18px;" onclick="openNav()">&#9776; </span>
+
+          </ul>
+          <!-- social media -->
+         
+
+        </div>
+      </nav>
+  
+  
+     <!-- desktop side nav  -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Discretion</a>
+        <a href="#">privacy policy</a>
+        <a href="#">Contact U.S</a>
+        <a href="#">English</a>
+      </div>
+  
+
+
+<!-- navbar close  -->
+
+
+<section id="callgirl__one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 ml-auto callgirl__one__para">
+              <div class="pt-5 mt-5">
+                <p>What happens in the box,</p>
+                <p>contact us</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="contact-us" >
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form role="form" action="<?php echo base_url(); ?>Contact/send_email#contact_form" method="post">
+                    <div class="form-group">
+                        <label for="usr" class="text-white">Name:</label>
+                        <input type="text" class="form-control" id="usr" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email" class="text-white">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="usr" class="text-white">Mobile Number:</label>
+                        <input type="text" class="form-control" id="usr" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="comment" class="text-white">Comment:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                      </div>
+
+                      <div class="contact_button">
+                          <input type="submit" class="contact_input_btn">
+                      </div>
+
+                </form>
+            </div>
+
+            <div class="col-md-6 my-auto">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="" class="img-fluid">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer  -->
+
+<footer class="py-5">
+    <div class="container">
+        <div class="footer__links text-center">
+            <a href="#">Available models</a>
+            <a href="#">The box</a>
+            <a href="#">The models</a>
+            <a href="#">Recording</a>
+            <a href="#">Discretion</a>
+            <a href="#">privacy policy</a>
+            <a href="#">Contact U.S</a>
+        </div>
+        <div class="footer__social_icons my-5 text-center">
+            <p>follow us on <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </p>
+        </div>
+        <div class="footer__social_copywright mt-5 text-center">
+            <p class="text-white">© 2019 - 2020 | La-Boite.ca</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap js  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- custom js  -->
+    <script src="./script/navbar.js"></script>
+</body>
+</html>

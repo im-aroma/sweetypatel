@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/location.css">
+    <!-- font awesome  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+
+    <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+          <a href="#"> <img src="https://la-boite.ca/themes/custom/laboite/images/laboite_logo.png" class="logo" alt="logo" /> </a>
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="call-girl.html">Call Girls</a>
+            </li>
+            <li>
+              <a href="location.html">Locations</a>
+            </li>
+            <li>
+              <a href="category.html" class="active">Categories</a>
+            </li>
+            <li>
+              <a href="price.html">Price</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact us</a>
+            </li>
+            <a href="tel:123-456-789" class="nav__mobile">   
+                <button type="button" class="btn btn-danger"> 
+                  <i class="fa fa-phone-square"></i>  123-456-7899 
+                  </button></a>
+
+                  <span class="mob-none" style="font-size:30px;cursor:pointer;color: #fff; padding-top: 18px;" onclick="openNav()">&#9776; </span>
+
+          </ul>
+          <!-- social media -->
+         
+
+        </div>
+      </nav>
+  
+  
+     <!-- desktop side nav  -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Discretion</a>
+        <a href="#">privacy policy</a>
+        <a href="#">Contact U.S</a>
+        <a href="#">English</a>
+      </div>
+  
+
+
+<!-- navbar close  -->
+
+
+<section id="callgirl__one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 ml-auto callgirl__one__para">
+              <div class="pt-5 mt-5">
+                <p>What happens in the box,</p>
+                <p>stays in the box.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<div class="container my-5">
+  <div class="row">
+    <?php
+
+            //print_r($get_cate);
+
+            foreach($get_cate as $get_cate_val)
+
+            { 
+
+       ?>
+      <div class="col-md-6 mb-4">
+          <a href="#" class="text-decoration-none">
+          <div class="card location_card">
+              <img class="card-img-top" src="<?php echo base_url(); ?>uploads/category/<?php  echo $get_cate_val['cat_img']; ?>" class="img-fluid" alt="<?php echo $get_cate_val['cat_alt_title']; ?>">
+              <div class="card-body location_card_body text-center">
+                  <h5 class="card-title"><?php echo $get_cate_val['sub_cat_title'];?></h5>
+                  <p class="card-title text-white"><?php echo $get_cate_val['sub_cat_title'];?></p>
+                </div>
+          </div>
+      </a>
+      </div>
+      <?php } ?>
+     
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- footer  -->
+
+<footer class="py-5">
+    <div class="container">
+        <div class="footer__links text-center">
+            <a href="#">Available models</a>
+            <a href="#">The box</a>
+            <a href="#">The models</a>
+            <a href="#">Recording</a>
+            <a href="#">Discretion</a>
+            <a href="#">privacy policy</a>
+            <a href="#">Contact U.S</a>
+        </div>
+        <div class="footer__social_icons my-5 text-center">
+            <p>follow us on <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </p>
+        </div>
+        <div class="footer__social_copywright mt-5 text-center">
+            <p class="text-white">© 2019 - 2020 | La-Boite.ca</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap js  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- custom js  -->
+    <script src="./script/navbar.js"></script>
+</body>
+</html>

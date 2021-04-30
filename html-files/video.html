@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap cdn  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/location.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <!-- font awesome  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+
+    <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+          <a href="#"> <img src="https://la-boite.ca/themes/custom/laboite/images/laboite_logo.png" class="logo" alt="logo" /> </a>
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="call-girl.html">Call Girls</a>
+            </li>
+            <li>
+              <a href="location.html">Locations</a>
+            </li>
+            <li>
+              <a href="category.html" >Categories</a>
+            </li>
+            <li>
+              <a href="price.html">Price</a>
+            </li>
+            <li>
+              <a href="price.html">videos</a>
+            </li>
+            <li>
+              <a href="contact.html" class="active">Contact us</a>
+            </li>
+            <a href="tel:123-456-789" class="nav__mobile">   
+                <button type="button" class="btn btn-danger"> 
+                  <i class="fa fa-phone-square"></i>  123-456-7899 
+                  </button></a>
+
+                  <span class="mob-none" style="font-size:30px;cursor:pointer;color: #fff; padding-top: 18px;" onclick="openNav()">&#9776; </span>
+
+          </ul>
+          <!-- social media -->
+         
+
+        </div>
+      </nav>
+  
+  
+     <!-- desktop side nav  -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Discretion</a>
+        <a href="#">privacy policy</a>
+        <a href="#">Contact U.S</a>
+        <a href="#">English</a>
+      </div>
+  
+
+
+<!-- navbar close  -->
+
+
+<section id="callgirl__one">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 ml-auto callgirl__one__para">
+              <div class="pt-5 mt-5">
+                <p>What happens in the box,</p>
+                <p>contact us</p>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Grid row -->
+<div class="container my-5">
+<div class="row" style="overflow-x: hidden;">
+
+  <?php
+                     $i =0;
+                    foreach($get_video_list as $get_video_list_val)
+                    {	
+            ?>
+    <!-- Grid column -->
+    <div class="col-lg-3 col-md-12 mb-4">
+  
+      <!--Modal: Name-->
+      <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+  
+          <!--Content-->
+          <div class="modal-content">
+  
+            <!--Body-->
+            <div class="modal-body mb-0 p-0">
+  
+              <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U"
+                  allowfullscreen></iframe>
+              </div>
+  
+            </div>
+  
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+              <span class="mr-4">Spread the word!</span>
+              
+  
+              <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4" data-dismiss="modal">Close</button>
+  
+            </div>
+  
+          </div>
+          <!--/.Content-->
+  
+        </div>
+      </div>
+      <!--Modal: Name-->
+  
+      <a><img class="img-fluid z-depth-1 card" src="<?php echo base_url(); ?>uploads/video_images/<?php echo $get_video_list_val['video_imge']; ?>" alt="video"
+          data-toggle="modal" data-target="#modal1"></a>
+  
+    </div>
+    <!-- Grid column -->
+
+    <?php 
+    $i++;
+    } ?>
+  </div>
+  <!-- Grid row -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer  -->
+
+<footer class="py-5">
+    <div class="container">
+        <div class="footer__links text-center">
+            <a href="#">Available models</a>
+            <a href="#">The box</a>
+            <a href="#">The models</a>
+            <a href="#">Recording</a>
+            <a href="#">Discretion</a>
+            <a href="#">privacy policy</a>
+            <a href="#">Contact U.S</a>
+        </div>
+        <div class="footer__social_icons my-5 text-center">
+            <p>follow us on <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </p>
+        </div>
+        <div class="footer__social_copywright mt-5 text-center">
+            <p class="text-white">© 2019 - 2020 | La-Boite.ca</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap js  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- custom js  -->
+    <script src="./script/navbar.js"></script>
+</body>
+</html>

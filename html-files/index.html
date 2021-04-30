@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php 
+         foreach($row as $val) { 
+         
+         ?>
+    <title><?php if(!empty($val['meta_title'])) { echo $val['meta_title']; } ?></title>
+    <meta name="description" content="<?php if(!empty($val['meta_des'])) { echo $val['meta_des']; } ?>" />
+    <?php 
+         } 
+         
+         ?>
+    <!-- bootstrap cdn  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/navbar.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>/css/index.css">
+    <!-- font awesome  -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+
+    <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+          <a href="#"> <img src="https://la-boite.ca/themes/custom/laboite/images/laboite_logo.png" class="logo" alt="logo" /> </a>
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="<?php echo base_url(); ?>" class="active">Home</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>call-girl">Call Girls</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>location">Locations</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>category">Categories</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>contact">Price</a>
+            </li>
+            <li>
+              <a href="<?php echo base_url(); ?>contact">Contact us</a>
+            </li>
+            <a href="tel:123-456-789" class="nav__mobile">   
+                <button type="button" class="btn btn-danger"> 
+                  <i class="fa fa-phone-square"></i>  123-456-7899 
+                  </button></a>
+
+                  <span class="mob-none" style="font-size:30px;cursor:pointer;color: #fff; padding-top: 18px;" onclick="openNav()">&#9776; </span>
+
+          </ul>
+          <!-- social media -->
+         
+
+        </div>
+      </nav>
+  
+  
+     <!-- desktop side nav  -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Discretion</a>
+        <a href="#">privacy policy</a>
+        <a href="#">Contact U.S</a>
+        <a href="#">English</a>
+      </div>
+  
+
+
+<!-- navbar close  -->
+
+
+
+<section id="home__slideshow">
+    <div class="container-fluid">
+
+<ul class='slideshow'>
+    <li>
+      <span>escort</span>
+    </li>
+    <li>
+      <span>escort</span>
+    </li>
+    <li>
+      <span>escort</span>
+    </li>
+    <li>
+      <span>escort</span>
+    </li>
+    <div class="row">
+        <div class="col-md-6 ml-auto">
+          <div class="row mt-5">
+
+              <div class="col-md-6 col-sm-6 col-6">
+                <div class="gallery_one card">
+                    <div class="gallery_two card-img">
+                      <a href="#" class="text-decoration-none">
+                    <img src="./img/gallery-images/one.jpeg" class="card-img-top img-fluid" alt="">
+                    <div class="layer"></div>
+                    <div class="gallery_three">
+                      <h6>SERINA</h6>
+                      <P>19 YEARS OLD, ESCORT GFE</P>
+                      <p class="blink-hard"><i class="fa fa-circle"></i>AVAILABLE NOW</p>
+                    </div>
+                      </a>
+                  </div>
+                  </div>
+
+              </div>
+              <div class="col-md-6 col-sm-6 col-6">
+                <div class="gallery_one card">
+                    <div class="gallery_two card-img">
+                      <a href="#" class="text-decoration-none">
+                    <img src="./img/gallery-images/one.jpeg" class="card-img-top img-fluid" alt="">
+                    <div class="layer"></div>
+                    <div class="gallery_three">
+                      <h6>MAGGY </h6>
+                      <P>19 YEARS OLD, ESCORT GFE</P>
+                       <p class="blink-hard"><i class="fa fa-circle"></i>AVAILABLE NOW</p>
+                    </div>
+                      </a>
+                  </div>
+                  </div>
+              </div>
+
+
+              
+          </div>
+         
+        </div>
+    </div>
+  </ul>
+
+
+</div>
+</section>
+
+
+
+
+
+
+
+<!-- home_two  -->
+<section id="home-two">
+<div class="container pt-5">
+    <div class="row pt-5">
+      <?php 
+                $c =0;
+                    //echo '<pre>';print_r($get_prof);
+
+                    foreach($get_prof as $get_prof_val)
+
+                    { 
+
+
+
+                    $pro_imge = explode(',',$get_prof_val['imge']);
+
+                    $pro_alt_title = explode(',',$get_prof_val['alt_title']);
+
+                    $pro_cat_title = explode(',',$get_prof_val['cat_title']);
+
+                    $pro_loc_title = explode(',',$get_prof_val['loc_title']);
+
+            ?>
+        <div class="col-md-3 col-sm-6 col-6 mb-5">
+          <div class="gallery_one card">
+              <div class="gallery_two card-img">
+                <a href="#" class="text-decoration-none">
+              <img src="<?php echo base_url(); ?>uploads/profile/<?php echo $pro_imge[0]; ?>" class="card-img-top img-fluid" alt="">
+              <div class="layer"></div>
+              <div class="gallery_three">
+                <h6><?php echo $get_prof_val['title']; ?></h6>
+                <P class="gallery_three__p"><?php echo $pro_cat_title[0]; ?></P>
+                <p class="blink-hard"><i class="fa fa-circle"></i>AVAILABLE NOW</p>
+              </div>
+                </a>
+            </div>
+            </div>
+        </div>
+        <?php 
+        $c++;
+        } ?>
+   
+
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- home three  -->
+
+<section id="home__three">
+    <div class="container-fluid p-lg-5 py-5">
+        <div class="row">
+            <div class="col-md-4 home__three__left">
+                <h2>Discretion assured</h2>
+                <p>Discretion is our golden rule! Your personal information is considered confidential and the concierge transmits to the model of your choice only the information strictly necessary for the meeting (for example the name of your hotel, your room number, your telephone number, your first and last names).</p>
+
+                <p>Each hostess is bound by absolute professional secrecy and must not keep any data concerning you. Each model with the certified identity of the box has an encrypted telephone which secures each conversation with the gentlemen and undertakes under contract to never communicate with an interlocutor without this one initiating the conversation, when you communicate directly with them on their private profiles.</p>
+
+                <p>In the company, we prefer to know our customers and establish a climate of mutual trust. Because you know what they say ... What happens in the box, stays in the box.</p>
+
+                <div class="home__three__left_youtube_video mt-5">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/UNZqm3dxd2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <h2>What people are saying about the box ...</h2>
+               <div class="row">
+                   <div class="col-lg-4 col-md-12 col-12 col-sm-12">
+                      <div class="card p-2 bg-dark home__three__right">
+                        <p>I was diagnosed with generalized terminal cancer. Getting the services of a young lady was on my bucket list before my final day. The enthusiasm and receptiveness of the concierge allowed me to live a more than perfect experience with Alice! Thank you again for advising me in the selection process which lasted a few days!</p>
+
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                          <b>DANIEL, SAINT LAMBERT</b>
+                          <p>CLIENT VÉRIFIÉ</p>
+                      </div>
+
+                      <div class="card p-2 bg-dark mt-5 home__three__right">
+                        <p>Hello I would like to thank Alexis for her excellent service for the 3h couple she gave us. She was able to put my husband at ease in just a few minutes. She granted all our wishes in a relaxed environment and above all WITHOUT RUSH! 😘😘</p>
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                        <b>DANIEL, SAINT LAMBERT</b>
+                        <p>CLIENT VÉRIFIÉ</p>
+                    </div>
+
+
+                   </div>
+                   <div class="col-lg-4 col-md-12 col-12 col-sm-12 mt-5">
+                    <div class="card p-2 bg-dark home__three__right">
+                        <p>WoW Kelly sublime body, 100% identical photos, what a beautiful moment spent with you I can't wait to see you again for another dinner and evening at the restaurant xxx</p>
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                        <b>DANIEL, SAINT LAMBERT</b>
+                        <p>CLIENT VÉRIFIÉ</p>
+                    </div>
+
+                    <div class="card p-2 bg-dark mt-5 home__three__right">
+                        <p>Thank you guys for the outstanding customer service you provided. Always replied within minutes to all e-mail and made my best friends bachelor party an unforgettable and special night! Very professional thank you !!</p>
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                        <b>DANIEL, SAINT LAMBERT</b>
+                        <p>CLIENT VÉRIFIÉ</p>
+                    </div>
+
+                    <div class="card p-2 bg-dark mt-5 home__three__right">
+                        <p>Thank you guys for the outstanding customer service you provided. Always replied within minutes to all e-mail and made my best friends bachelor party an unforgettable and special night! Very professional thank you !!</p>
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                        <b>DANIEL, SAINT LAMBERT</b>
+                        <p>CLIENT VÉRIFIÉ</p>
+                    </div>
+
+                   </div>
+                   <div class="col-lg-4 col-md-12 col-12 col-sm-12 mt-5">
+                    <div class="card p-2 bg-dark home__three__right">
+                        <p>Good morning Alyssia, I would really like to thank you for our intimate moment yesterday. I still have the giggles we had in mind and I'm just thinking of you! Can't wait to see you have a nice day looking forward to seeing you again soon for another sweet moment in your presence</p>
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                        <b>DANIEL, SAINT LAMBERT</b>
+                        <p>CLIENT VÉRIFIÉ</p>
+                    </div>
+
+                    <div class="card p-2 bg-dark mt-5 home__three__right">
+                        <p>Hey just wanted to thank Alexis for tucking me in yesterday and look after me lol I had one too many drinks and i just hope I didn't do anything stupid! Was nice to see she cleaned up my mess before she left ... very appreciated lol</p>
+                        <div class="home_three_img">
+                            <img src="./img/5stars.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+
+                      <div class="home_three_bold">
+                        <b>DANIEL, SAINT LAMBERT</b>
+                        <p>CLIENT VÉRIFIÉ</p>
+                    </div>
+
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- home__four  -->
+
+<div class="home__four">
+    <div class="container-fluid">
+        <div class="home__four_logo text-center py-5">
+            <img src="./img/logo.png" class="img-fluid" alt="">
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="home__four_text text-center">
+                    <p>Bienvenue dans la boîte! Le collectif de modèles indépendantes VIP de luxe à Montréal et l’est du Canada! Notre équipe de marketing vous garanti un service à la clientèle professionnel, confidentiel, exceptionnel et inégalé. Nos modèles et photos sont 100% véridique et authentique. Nous offrons services d’accompagnement agençant tentation, séduction, aventures incroyable et expériences inoubliables. Venez clavardez en direct avec nous avec l’option live chat!</p>
+        
+                    <p>Laissez-vous tentez et parcourez  les différentes sections du site pour découvrir les services offert et en apprendre plus sur chaque demoiselles. Que vous soyez intéressé à discuter en direct avec nous ou passer par l’intermédiaire de notre concierge pour questions et informations, quelqu’un vous répondra et communiquera avec vous 24 heures  sur 24 • 7 jours sur 7!</p>
+
+                    <div class="home__four_text_last my-5">
+                        <p>N’oubliez surtout pas la règle numéro 1:</p>
+                        <b>Ce qui se passe dans la boîte</b> <br> <br>
+                        <b>Reste dans la boîte.</b>
+                    </div>
+
+                    <div class="home__four_text__btn pb-5">
+                        <a href="tel:123-456-789" class="nav__mobile">   
+                            <button type="button" class="btn"> 
+                              <i class="fa fa-phone-square"></i>  123-456-7899 
+                              </button></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- footer  -->
+
+<footer class="py-5">
+    <div class="container">
+        <div class="footer__links text-center">
+            <a href="#">Available models</a>
+            <a href="#">The box</a>
+            <a href="#">The models</a>
+            <a href="#">Recording</a>
+            <a href="#">Discretion</a>
+            <a href="#">privacy policy</a>
+            <a href="#">Contact U.S</a>
+        </div>
+        <div class="footer__social_icons my-5 text-center">
+            <p>follow us on <i class="fa fa-twitter"></i> <i class="fa fa-instagram"></i> </p>
+        </div>
+        <div class="footer__social_copywright mt-5 text-center">
+            <p class="text-white">© 2019 - 2020 | La-Boite.ca</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- bootstrap js  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- custom js  -->
+    <script src="./script/navbar.js"></script>
+</body>
+</html>

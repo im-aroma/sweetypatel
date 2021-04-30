@@ -1,0 +1,19 @@
+FONTS:
+<style> @import url('https://fonts.googleapis.com/css?family=Francois+One&display=swap');</style>
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Aclonica|Bad+Script|Barriecito|Bungee+Inline|Cabin+Sketch|Fredericka+the+Great|Knewave|Lilita+One|Londrina+Solid|Love+Ya+Like+A+Sister|Monoton|Shojumaru|Ultra&display=swap');
+ </style>
+h1
+font-family: 'Londrina Solid', cursive;
+
+h1 span
+font-family: 'Bungee Inline', cursive;
+
+p
+font-family: 'Cabin Sketch', cursive;
+
+info p
+font-family: 'Aclonica', sans-serif;
+
+a
+font-family: 'Francois One', sans-serif;

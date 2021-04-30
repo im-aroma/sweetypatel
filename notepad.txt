@@ -1,0 +1,44 @@
+lazyload
+
+
+
+
+
+<div class="container my-4"> 
+<h3 class="text-theme-1 text-center h4">other profile you may like</h3>
+<div class="responsive">
+        <?php 
+        // echo '<pre>'; print_r($get_rand_prof); die; 
+          foreach($get_rand_prof as $res){
+          $pro_post_imge = explode(',',$res['imge']);
+          $pro_alt_title = explode(',',$res['alt_title']);
+        ?>
+     <div class="p-1 card-group">
+         <div class="card mb-3 bg-lbrown border border-dark rounded">
+            <div class="card-body p-0 pimg position-relative">
+               <a href="<?php echo base_url()?>profile/<?php echo $res['title']?>/<?php echo $res['id']?>">
+               <img class="lazyload img-fluid rounded-top" data-src="<?php echo base_url();?>uploads/profile/<?php echo $pro_post_imge[1]?>" alt=" <?php echo $pro_alt_title[1];?>">
+               </a> 
+               <p class="h6  bottomleft"><i class="mr-2 fa fa-map-marker-alt"></i>
+                 <?php echo $res['availability'];?>                     
+               </p>
+            </div>
+            <div class="card-footer bg-transparent cpad">
+               <!-- <div class="border-bottom border-mum">
+                  <p class="d-inline-flex">
+                     Educated Girls                        
+                  </p>
+                  <div class="float-right d-flex mt-1">
+                     <span class="text-warning">Not Rated</span>
+                  </div>
+               </div> -->
+               <h4 class="h5 text-uppercase text-white text-center mt-2"><?php echo $res['title'];?></h4>
+            </div>
+         </div>
+      </div>
+     
+      <?php } ?>
+</div>
+
+
+</div>

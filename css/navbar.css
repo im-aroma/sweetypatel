@@ -1,0 +1,385 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+/*  global classes */
+
+/* section */
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+.links .active{
+  color: green !important;
+}
+
+nav {
+  /* background: rgba(14, 13, 13, 0.801) !important; */
+  box-shadow: var(--light-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #F8963F !important;
+}
+.nav-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0px 10px;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: #fff;
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: red;
+  transform: rotate(90deg);
+}
+.logo {
+  height: 60px;
+}
+
+.links a {
+  color: #000 !important;
+  font-size: 1rem !important;
+  text-transform: capitalize !important;
+  letter-spacing: 0.1rem !important;
+  display: block !important;
+  padding: 0.1rem 1rem !important;
+  transition: var(--transition) !important;
+  text-decoration: none !important;
+  padding-top: 25px !important;
+}
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: red !important;
+  padding-left: 1.5rem;
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 30rem;
+}
+
+/* mine  */
+.nav__mobile{
+    color: #000 !important;
+}
+
+
+@media screen and (min-width: 990px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 1rem; */
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    /* margin: 0 0.5rem; */
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+
+}
+
+
+
+
+/* side nav  */
+.sidenav {
+  z-index: 999999 !important;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(116, 9, 9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.mob-none, .closebtn{
+  z-index: 9999;
+}
+
+  /* my media quories  */
+
+  @media only screen and (max-width: 798px) {
+     .mob-none{
+         display: none !important;
+     }
+  }
+
+
+
+
+
+
+
+
+
+  /* footer__links  */
+footer{
+  background-color: rgb(26,26,26);
+  border-top: 1px solid #fff;
+  margin-bottom: -26px;
+}
+
+.footer__links a{
+    /* color: #fff; */
+    color:#000;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: 0.5s all ease-in;
+}
+.footer__links a:hover{
+    color: red;
+    padding: 0px 10px;
+}
+
+.footer__social_icons p{
+    color: #000;
+    font-size: 1.8em;
+}
+
+.footer__social_icons .fa-twitter{
+   background-color: rgb(133, 7, 7);
+   color: #fff !important;
+   padding: 5px;
+   border-radius: 99px;
+}
+.footer__social_icons .fa-pinterest{
+  background-color: rgb(133, 7, 7);   color: #000 !important;
+   padding: 5px;
+   border-radius: 99px;
+   color: #fff !important;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+  .locanto_banner_h1 h1 {
+    font-size: 1.8em !important;
+    margin-right: 10px;
+  }
+  .view_home_one{
+    margin-top: 100px !important;
+  }
+ 
+  /* .best_heading{
+    margin-top: -100px !important;
+    font-size: 15px !important;
+  } */
+}
+
+
+
+
+
+
+
+.locanto_banner_h1 h1 {
+  margin-right: 20px;
+  margin: 60px 60px;
+}
+
+.view_home_threeee h2{
+  font-size: 1.8em;
+}
+
+.text-theme-1{
+  font-size: 1.8em;
+}
+.section_fourrr h2{
+  font-size: 1.8em;
+}
+
+.view_contact_address span{
+  font-size: 1.8em;
+}
+.view_contact_address a{
+  font-size: 1.8em;
+}
+.view_contact_address address{
+  color: #fff;
+  font-size: 1.2em;
+}
+
+
+body h1,h2,h3,h4,h5,h6{
+  font-family: fira sans,sans-serif !important;
+}
+
+body p{
+  font-family: cabin,sans-serif !important;
+}
+
+.font_normal{
+  font-weight: normal !important;
+}
